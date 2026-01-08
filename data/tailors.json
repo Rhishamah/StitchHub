@@ -1,0 +1,27 @@
+[
+  {
+    "id": "enigma",
+    "name": "#Enigma",
+    "rating": 4.3,
+    "services": ["Suits", "Kaftans"],
+    "profile_image": "./profile%20images/profile-image.jpeg",
+    "description": "Professional tailor with experience in bespoke suits and clothing alterations. Fast turnaround and great finish.",
+    "images": [
+      "./profile%20images/1766517971553.jpg",
+      "./profile%20images/1766259358972.jpg",
+      "./profile%20images/FB_IMG_17661266652863460.jpg"
+    ]
+  },
+  {
+    "id": "stitchlab",
+    "name": "#StitchLab",
+    "rating": 4.6,
+    "services": ["Dresses", "Alterations"],
+    "profile_image": "./profile%20images/profile-image.jpeg",
+    "description": "Experienced in dresses and precision alterations. Attention to detail and client satisfaction.",
+    "images": [
+      "./profile%20images/1766517971553.jpg",
+      "./profile%20images/FB_IMG_17661266652863460.jpg"
+    ]
+  }
+]

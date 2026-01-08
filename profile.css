@@ -1,0 +1,64 @@
+/* Profile display page styles (separate) */
+body{ background: var(--bg); color: antiquewhite; }
+.profile-card{ max-width: 1100px; margin: 28px auto; padding: 18px; }
+.profile-hero{ display: grid; grid-template-columns: 260px 1fr; gap: 24px; align-items: start; background: var(--card-bg); padding: 20px; border-radius: 12px; border:1px solid var(--card-border); box-shadow: 0 6px 18px rgba(0,0,0,0.35); }
+.profile-hero img{ border-radius: 12px; width: 100%; height: 260px; object-fit: cover; }
+.profile-info h2{ margin: 0 0 8px 0; font-size: 1.6rem; }
+.profile-info p{ color: var(--muted); line-height: 1.5; }
+.profile-info .cta{ margin-top: 14px; }
+.profile-info .btn-primary{ padding: 10px 16px; border-radius: 10px; }
+.profile-meta{ margin-bottom: 8px; color: var(--muted); font-weight: 600; }
+.portfolio{ margin-top: 22px; }
+.galleries{ display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+.galleries .gallery img{ width:100%; height:180px; object-fit: cover; border-radius: 10px; }
+
+/* visual separation for sections */
+.profile-card section{ margin-bottom: 18px; }
+
+@media (max-width: 900px){
+	.profile-hero{ grid-template-columns: 1fr; text-align: center; }
+	.profile-hero img{ width: 220px; height: 220px; margin: 0 auto; }
+}
+
+/* Lightbox styles */
+.lightbox{
+	position: fixed;
+	inset: 0;
+	display: flex; /* keep in DOM for animations and focus management */
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.8);
+	z-index: 1200;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .28s ease, transform .28s ease;
+	transform: scale(0.98);
+}
+.lightbox[aria-hidden="false"]{ opacity: 1; pointer-events: auto; transform: scale(1); }
+.lightbox .lb-dialog{ max-width: 900px; width: 90%; background: transparent; border-radius: 8px; }
+.lightbox img{ width: 100%; height: auto; display: block; border-radius: 6px; }
+.lb-controls{ display:flex; gap:12px; justify-content: space-between; align-items: center; margin-top: 10px; }
+.lb-btn{ background: rgba(255,255,255,0.06); color: antiquewhite; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
+.lb-play[aria-pressed="true"]{ background: linear-gradient(90deg, var(--accent), var(--brand-purple)); color: black; }
+.lb-close{ position: absolute; top: 18px; right: 18px; background: rgba(0,0,0,0.4); border-radius: 50%; width: 40px; height: 40px; display:flex; align-items:center; justify-content:center; border: none; color: white; }
+.lb-caption{ color: var(--muted); margin-left: 8px; }
+
+/* numeric indicator and announcer */
+.lb-indicator{ color: var(--muted); font-weight: 700; margin-left: 8px; }
+.lb-controls .options{ display:flex; gap:8px; align-items:center; }
+.lb-controls .options label{ font-size: .85rem; color: var(--muted); }
+.lb-controls select, .lb-controls input[type="checkbox"]{ background: rgba(255,255,255,0.03); color: antiquewhite; border:1px solid rgba(255,255,255,0.06); padding:6px 8px; border-radius:6px; }
+
+/* visually hidden for screen reader only elements */
+.sr-only{ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+
+/* thumbnail strip inside lightbox */
+.lb-thumbs{ display:flex; gap:8px; margin-top:12px; overflow:auto; padding:6px 2px; }
+.lb-thumbs button{ border: none; background: transparent; padding: 0; cursor: pointer; border-radius: 6px; outline: none; }
+.lb-thumbs img{ width: 72px; height: 48px; object-fit: cover; display:block; border-radius: 6px; opacity: .7; transition: opacity .18s, transform .12s; }
+.lb-thumbs button:focus img, .lb-thumbs .active img{ opacity: 1; transform: scale(1.04); box-shadow: 0 6px 18px rgba(0,0,0,0.5); }
+
+/* image crossfade helpers */
+.lightbox img{ transition: opacity .28s ease; }
+.lightbox img.loading{ opacity: 0; }

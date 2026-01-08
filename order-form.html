@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StitchHub — Order form</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./order.css">
+</head>
+<body>
+  <header class="dash">
+    <h1 id="logo"><span id="span-1">Stitch</span><span id="span-2">Hub</span></h1>
+    <nav class="nav-links"><a href="marketplace.html">Marketplace</a></nav>
+  </header>
+
+  <main class="container order-card page-content">
+    <h2>Place an order</h2>
+    <div class="order-grid">
+      <form id="orderForm" class="order-form" action="#" method="post">
+        <div class="order-success" id="orderSuccess" role="status" aria-live="polite" tabindex="-1" style="display:none">Order submitted — thank you! We'll contact you shortly.</div>
+      <label for="tailor">Select tailor</label>
+      <select id="tailor" name="tailor" required>
+      </select>
+
+      <label for="service">Service</label>
+      <select id="service" name="service">
+        <option>Suit (bespoke)</option>
+        <option>Alteration</option>
+        <option>Custom dress</option>
+      </select>
+
+      <label for="size">Measurements / Notes</label>
+      <textarea id="size" name="size" rows="4" placeholder="Add measurements or notes" required></textarea>
+
+      <label for="date">Preferred date</label>
+      <input id="date" name="date" type="date">
+
+      <label for="contact">Your contact phone</label>
+      <input id="contact" name="contact" type="tel" placeholder="0800 000 000">
+        <button class="btn-primary" type="submit">Submit order</button>
+      </form>
+
+      <aside class="order-summary sticky" aria-labelledby="summary-title">
+        <h3 id="summary-title">Order summary</h3>
+        <div class="summary-items" id="summaryItems">
+          <div class="item"><span>Tailor</span><span id="s-tailor">—</span></div>
+          <div class="item"><span>Service</span><span id="s-service">—</span></div>
+          <div class="item"><span>Date</span><span id="s-date">—</span></div>
+        </div>
+        <div class="total" id="s-total">Estimate: —</div>
+      </aside>
+    </div>
+    <script src="./scripts/order.js" defer></script>
+  </main>
+</body>
+</html>

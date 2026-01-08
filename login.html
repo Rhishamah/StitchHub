@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StitchHub — Login</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Small inline adjustments so pages work standalone if CSS not reloaded */
+    .auth-header{ margin-top: 80px; }
+  </style>
+</head>
+<body>
+  <div class="container auth-header">
+    <main class="auth-card" role="main" aria-labelledby="auth-title">
+      <h1 id="auth-title"><span id="span-1">Stitch</span><span id="span-2">Hub</span></h1>
+      <p class="muted">Welcome back — sign in to continue</p>
+      <form class="auth-form" action="#" method="post" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="••••••••" required>
+
+        <button class="btn-primary" type="submit">Sign in</button>
+      </form>
+
+      <p class="center small">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </main>
+  </div>
+</body>
+</html>

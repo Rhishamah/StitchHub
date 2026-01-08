@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StitchHub — Marketplace</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./marketplace.css">
+  </head>
+<body>
+  <header class="dash">
+    <h1 id="logo"><span id="span-1">Stitch</span><span id="span-2">Hub</span></h1>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="marketplace.html" aria-current="page">Marketplace</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+    <main class="container page-content">
+    <h2 class="page-title">Find a Tailor</h2>
+    <section class="filters">
+      <input type="search" placeholder="Search tailors or services" aria-label="Search tailors">
+      <select aria-label="Filter by service">
+        <option>All services</option>
+        <option>Suits</option>
+        <option>Kaftans</option>
+        <option>Dresses</option>
+      </select>
+    </section>
+
+    <section class="listings"> <!-- populated by scripts/marketplace.js --> </section>
+    <script src="./scripts/marketplace.js" defer></script>
+  </main>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StitchHub — Tailor profile</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./profile.css">
+</head>
+<body>
+  <header class="dash">
+    <h1 id="logo"><span id="span-1">Stitch</span><span id="span-2">Hub</span></h1>
+    <nav class="nav-links">
+      <a href="marketplace.html">Back to marketplace</a>
+      <a href="order-form.html" class="btn-primary">Order</a>
+    </nav>
+  </header>
+
+  <main class="container profile-card page-content">
+    <section class="profile-hero">
+      <img id="t-profile-img" src="" alt="Tailor image" width="220" height="220" loading="lazy">
+      <div class="profile-info">
+        <h2 id="t-name">Loading…</h2>
+        <p id="t-meta" class="muted"> </p>
+        <p id="t-desc"> </p>
+        <div class="cta">
+          <a id="t-order" href="order-form.html" class="btn-primary">Book this tailor</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <h3>Portfolio</h3>
+      <div id="t-portfolio" class="galleries"></div>
+        <button class="gallery-open" data-index="${i}" aria-label="Open image ${i+1}">View</button>
+    </section>
+    <script src="./scripts/profile-display.js" defer></script>
+    <script src="./scripts/gallery-lightbox.js" defer></script>
+  </main>
+</body>
+</html>

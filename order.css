@@ -1,0 +1,20 @@
+/* Order form page styles (separate) */
+body{ background: var(--bg); color: antiquewhite; }
+.order-card{ max-width: 980px; margin: 28px auto; padding: 18px; }
+.order-grid{ display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
+.order-form{ display:flex; flex-direction: column; gap: 12px; background: var(--card-bg); padding: 20px; border-radius: 10px; border: 1px solid var(--card-border); }
+.order-form label{ color: var(--muted); font-weight: 600; }
+.order-form input, .order-form select, .order-form textarea{ padding: 12px; border-radius: 8px; border:1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.03); color: antiquewhite; }
+.order-form textarea{ resize: vertical; min-height: 120px; }
+.order-form .btn-primary{ align-self: flex-start; padding: 10px 16px; }
+
+.order-summary{ background: rgba(0,0,0,0.28); border:1px solid var(--card-border); padding: 16px; border-radius: 10px; }
+.order-summary h3{ margin-top: 0; }
+.order-summary .item{ display:flex; justify-content:space-between; margin-bottom: 8px; }
+.order-summary .total{ font-weight: 800; font-size: 1.1rem; margin-top: 10px; }
+.order-summary.sticky{ position: sticky; top: 84px; }
+
+/* success message */
+.order-success{ display: none; padding: 12px; background: rgba(40,200,40,0.12); border: 1px solid rgba(40,200,40,0.25); color: #c6ffd1; border-radius: 8px; margin-bottom: 8px; }
+
+@media (max-width: 920px){ .order-grid{ grid-template-columns: 1fr; } .order-summary.sticky{ position: static; } }
